@@ -79,7 +79,7 @@ WinEnterは頻繁に発生するイベントなので重い処理は入れない
 
 > 実行コマンド: execute "setlocal scrolloff=" . str2nr(string(floor((line('w$') - line('w0')) * 0.20)))
 
-ここは最初以下のようにしていたのですが、うまく動作しませんでした。
+ここは最初以下のようにしていたのですが、うまく動作しませんでした。  
 `setlocal scrolloff=str2nr(string(floor((line('w$') - line('w0')) * 0.20)))`
 
 どうも=の右側が全て文字列として渡っていたようで、処理が実行できていませんでした。  
